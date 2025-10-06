@@ -1,0 +1,79 @@
+/* Quiz.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    overflow: hidden; /* ✅ prevents scroll */
+  }
+  
+  .contain {
+    height: 100vh; /* fill full screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #a18cd1 0%, #fbc2eb 100%);
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .contain h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+  }
+  
+  .grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  .prev {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+  
+  .next {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  }
+  
+  button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
