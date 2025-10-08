@@ -60,5 +60,5 @@ Ensure both backend and frontend servers are running.
 
 👩‍💻 Author
 Soumya Madishetti
-💼 GitHub: github.com/soumyamadishetti
-📧 Email: soumyamadishettimsd17@gamil.com
+💼 GitHub: [github.com/soumyamadishetti](https://github.com/SoumyaMadishetti17)
+📧 Email: soumyamadishettimsd17@gmail.com
