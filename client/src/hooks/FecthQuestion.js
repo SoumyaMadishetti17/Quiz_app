@@ -8,7 +8,7 @@ import * as Action from '../components/redux/question_reducer'
 // fetch question hook to fetch api data and set value to store
 
 export const useFetchQuestion=()=>{
-    const dispatch=useDispatch()
+    const dispatch=useDispatch();
     const [getData, setGetData]=useState({isLoading:false,apiData:[],serverError:null})
 
     useEffect(()=>{
@@ -35,4 +35,21 @@ export const useFetchQuestion=()=>{
     },[dispatch])
 
     return [getData,setGetData]
+}
+
+// move action dispatch button function
+
+export const moveNextQuestion=()=>async (dispatch)=>{
+    try{
+        dispatch(Action.moveNextAction())
+    }catch(error){
+        console.log(error);
+    }
+}
+export const movePrevQuestion=()=>async (dispatch)=>{
+    try{
+        dispatch(Action.movePrevAction())
+    }catch(error){
+        console.log(error);
+    }
 }
