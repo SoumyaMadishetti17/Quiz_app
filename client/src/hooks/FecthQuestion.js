@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux";
-import { data } from "react-router-dom";
+import data from '../database/Data'
+
+// redux actions
+import * as Action from '../components/redux/question_reducer'
 
 // fetch question hook to fetch api data and set value to store
 
@@ -14,14 +17,22 @@ export const useFetchQuestion=()=>{
         // async function fetch backend data
         (async()=>{
             try{
-                let question=await data;
+                let question=await data;                
                 if(question.length>0){
                     setGetData(prev => ({...prev,isLoading:false}));
                     setGetData(prev => ({...prev,apiData:question}));
 
-                    // dispatch
+                    // dispatch an action
+                    dispatch(Action.startExamAction(question))
+                }else{
+                    throw new Error("No QuestionAvailable")
                 }
+            }catch(error){
+                setGetData(prev=>({...prev,isLoading:false}))
+                setGetData(prev=>({...prev,serverError:error}))
             }
         })();
-    })
+    },[dispatch])
+
+    return [getData,setGetData]
 }
