@@ -30,24 +30,24 @@ It’s fast, responsive, and follows a clean full-stack architecture.
 
 ## ⚙️ Setup Instructions
 
-### 1️⃣ Clone the Repository
+### 1️⃣ Clone the Repository :
 ➡️git clone https://github.com/yourusername/quiz-app.git
 ➡️cd quiz-app
 
-2️⃣ Setup Backend
+2️⃣ Setup Backend :
 ➡️cd backend
 ➡️npm install
 ➡️npm run server
 
-3️⃣ Setup Frontend
-cd ../frontend
-npm install
-npm run dev
+3️⃣ Setup Frontend :
+➡️cd ../frontend
+➡️npm install
+➡️npm run dev
 
-4️⃣ Run the Application
+4️⃣ Run the Application :
 Ensure both backend and frontend servers are running.
 
-Open your browser at http://localhost:5173
+➡️Open your browser at http://localhost:5173
 
 ✅ Enjoy your quiz app!
 
