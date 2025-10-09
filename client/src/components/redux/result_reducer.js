@@ -9,10 +9,19 @@ export const resultReducer= createSlice({
     reducers:{
         setUserId:(state,action)=>{
             state.userId=action.payload
+        },
+        pushResultAction:(state,action)=>{
+            state.result.push(action.payload)
+        },
+        resultResultAction:()=>{
+            return {
+                userId: null,
+                result:[]
+            }
         }
     }
 })
 
-export const {setUserId} = resultReducer.actions;
+export const {setUserId,pushResultAction,resultResultAction} = resultReducer.actions;
 
 export default resultReducer.reducer;

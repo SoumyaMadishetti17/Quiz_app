@@ -2,10 +2,17 @@ import React from 'react'
 import './Res.css'
 import { Link } from 'react-router-dom'
 import ResultTable from './ResultTable';
+import { useDispatch } from 'react-redux';
+import { resetAllAction } from './redux/question_reducer';
+import { resultResultAction } from './redux/result_reducer';
 
 const Result = () => {
+
+    const dispatch=useDispatch()
     function onRestart(){
-        console.log('on Restart');
+        dispatch(resetAllAction())
+        dispatch(resultResultAction())
+        // console.log('on Restart');
     }
   return (
     <div className='res-cont'>
